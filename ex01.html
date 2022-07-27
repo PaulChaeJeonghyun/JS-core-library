@@ -30,10 +30,18 @@
          let $contents = $("#contents");
          let cnt = 0;
 
-         setInterval(function () {
-            cnt++
+         //anonymous function
+         // setInterval(function () {
+         //    cnt++
+         //    $contents.text(cnt);
+         // }, 1000);
+
+         //Normal function
+         function addCnt() {
+            cnt++;
             $contents.text(cnt);
-         }, 1000);
+         }
+         setInterval(addCnt, 1000);
       });
    </script>
    }
