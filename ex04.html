@@ -38,10 +38,21 @@
          let cnt = 0;
          let $score = $("#score");
 
+         //flag variation
+         let play = true;
+
          $("#globe").click(function () {
-            cnt++
-            $score.html(cnt);
+            if (play == true) {
+               cnt++
+               $score.html(cnt);
+            }
          });
+         //in 5 sec. game will be done
+         setTimeout(function () {
+            play = false;
+            alert("Game is over");
+         }, 5000);
+
       });
    </script>
 </head>
