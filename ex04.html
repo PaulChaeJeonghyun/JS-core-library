@@ -30,6 +30,20 @@
          font-weight: bold;
       }
    </style>
+   <script src="lib/jquery-3.6.0.min.js"></script>
+   <script>
+      // Score when the globe clicked
+      //using setTimeout() within 5sec.
+      $(document).ready(function () {
+         let cnt = 0;
+         let $score = $("#score");
+
+         $("#globe").click(function () {
+            cnt++
+            $score.html(cnt);
+         });
+      });
+   </script>
 </head>
 <div id="text">
    Score : <span id="score">0</span>
