@@ -6,9 +6,33 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Globe game</title>
+   <style>
+      .container {
+         width: 600px;
+         height: 500px;
+         position: relative;
+         border: 3px solid red;
+      }
+
+      .container #globe {
+         width: 50px;
+         margin-left: 250px;
+         margin-top: 150px;
+      }
+
+      #text {
+         font-size: 30px;
+         font-weight: bold;
+      }
+
+      #score {
+         font-size: 30px;
+         font-weight: bold;
+      }
+   </style>
 </head>
-<div>
-   Score<span id="score">0</span>
+<div id="text">
+   Score : <span id="score">0</span>
 </div>
 <div class="container">
    <img src="img/world.png" id="globe" alt="">
