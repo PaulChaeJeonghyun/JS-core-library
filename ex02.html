@@ -31,17 +31,15 @@
 
 
          //anonymous function
-         setTimeout(function () {
-            $contents.text("Hello World! Welcome!");
-         }, 3000);
+         // setTimeout(function () {
+         //    $contents.text("Hello World! Welcome!");
+         // }, 3000);
 
          //Normal function
-         //    function addCnt() {
-         //       cnt++;
-         //       $contents.text(cnt);
-         //    }
-         //    setInterval(addCnt, 1000);
-         // });
+         function displayText() {
+            $contents.text("Hello World! Welcome!");
+         }
+         setTimeout(displayText, 3000);
       });
    </script>
 
