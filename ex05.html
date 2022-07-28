@@ -47,6 +47,56 @@
       // Moving distance 
       let step = 50;
       let timerID = 0;
+
+      $(document).ready(function () {
+         init();
+         initEvent();
+      });
+      //event reset
+      function init() {
+         $fish = $("#fish");
+      }
+      //Setting event
+      function initEvent() {
+         $("#btnStart").click(function () {
+            start();
+         });
+
+         $("#btnStop").click(function () {
+            stop();
+         });
+
+      }
+      //moving fish timer set
+      function start() {
+         if (timerID == 0) {
+            timerID = setInterval(function () {
+               moveFish();
+            }, 100);
+         }
+      }
+      //stoping fish
+      function stop() {
+         //alert(timerID);
+         clearInterval(timerID);
+         timerID = 0;
+      }
+      // moving fish
+      function moveFish() {
+         let x = $fish.position().left + step;
+
+         if (x >= 430) {
+            $fish.attr("src", "img/fish2.png");
+            step = -50;
+         }
+
+         if (x < 50) {
+            $fish.attr("src", "img/fish1.png");
+            step = 50;
+         }
+         $fish.css("left", x);
+      }
+
    </script>
 </head>
 
