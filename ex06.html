@@ -24,6 +24,28 @@
          left: 150px;
       }
    </style>
+   <script src="lib/jquery-3.6.0.min.js"></script>
+   <script>
+      $(Document).ready(function () {
+         // Set as an array the flags
+         let imgList = ["england.png", "korea.png", "germany.png", "usa.png", "italia.png", "spain.png", "canada.png"];
+         let index = 0;
+         let $banner = $(".banner");
+
+         setInterval(function () {
+            index++;
+            //setting index 0 when index is same or longer than imgList`s array
+            if (index >= imgList.length) {
+               index = 0;
+            }
+
+            //Getting next img`s name
+            let imgName = imgList[index];
+            $banner.attr("src", "img/" + imgName);
+            //document.write(imgName + "<br>");
+         }, 1000);
+      })
+   </script>
 </head>
 
 <body>
