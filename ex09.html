@@ -6,12 +6,47 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Finhing Game</title>
+   <style>
+      #start {
+         font-size: 20px;
+         font-weight: bold;
+         margin-left: 180px;
+      }
+
+      #scoreText {
+         font-size: 20px;
+         font-weight: bold;
+         margin-left: 10px;
+      }
+
+      #score {
+         font-size: 20px;
+         font-weight: bold;
+         color: red;
+         margin-left: 10px;
+      }
+
+      .panel {
+         width: 600px;
+         height: 400px;
+         position: relative;
+         border: 2px solid blue;
+         margin-top: 20px;
+      }
+
+      .panel #fish {
+         position: absolute;
+         left: 240px;
+         top: 165px;
+      }
+   </style>
 </head>
 
 <body>
    <div>
       <button id="start">Start</button>
-      <span id="score">Score : 0</span>
+      <span id="scoreText">Score : </span>
+      <span id="score">0</span>
    </div>
    <div class="panel">
       <img src="img/fish1.png" id="fish">
